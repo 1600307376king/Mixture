@@ -18,6 +18,6 @@ def return_images():
     #     f.save(image_url)
     #     print(image_url)
 
-    return render_template('index.html')
+    return render_template('../../upload_img/templates/index.html')
 
 

@@ -1,13 +1,13 @@
-from flask import Flask, request, render_template
-from view.link_images import images_index
+from flask import Flask
+from fw_api.view.link_images import images_index
+from fw_api.view.site_rediect import fw_index
 
 
 app = Flask(__name__)
 app.config.from_pyfile('./config/setting.py')
 
 app.register_blueprint(images_index, url_prefix='')
-
-# http://fw.newlifehealth.cn:8099/pp/?enc=58918e22003003000003
+app.register_blueprint(fw_index, url_prefix='')
 
 
 if __name__ == '__main__':
