@@ -1,6 +1,6 @@
 from flask import Flask
-from fw_api.view.link_images import images_index
-from fw_api.view.site_rediect import fw_index
+from view.upload_img.link_images import images_index
+from view.fw_api.site_rediect import fw_index
 
 
 app = Flask(__name__)
